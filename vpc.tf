@@ -11,8 +11,6 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  access_key = "AKIAUZX2TEZGJTBYVDCV"
-  secret_key = "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"
   region = "us-east-1"
 }
 
@@ -22,7 +20,7 @@ provider "aws" {
 resource "aws_vpc" "my-vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {
-    Name = "Terra-VPC"
+    Name = "Terraform-VPC"
   }
 }
 
@@ -34,7 +32,7 @@ resource "aws_subnet" "web-subnet-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Websubterra-1a"
+    Name = "Websubter-1a"
   }
 }
 
@@ -45,7 +43,7 @@ resource "aws_subnet" "web-subnet-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Websubterra-2b"
+    Name = "Websubter-2b"
   }
 }
 
@@ -57,7 +55,7 @@ resource "aws_subnet" "application-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Applicationsubterra-1a"
+    Name = "Applicationsubter-1a"
   }
 }
 
@@ -68,7 +66,7 @@ resource "aws_subnet" "application-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Applicationsubterra-2b"
+    Name = "Applicationsubter-2b"
   }
 }
 
@@ -79,7 +77,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.my-vpc.id
 
   tags = {
-    Name = "Terra-IGW"
+    Name = "Terraform-IGW"
   }
 }
 
@@ -94,7 +92,7 @@ resource "aws_route_table" "web-rt" {
   }
 
   tags = {
-    Name = "Webterra-RT"
+    Name = "Webterraform-RT"
   }
 }
 
