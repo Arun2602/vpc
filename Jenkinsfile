@@ -13,7 +13,6 @@ pipeline {
 	                secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
 	                    git branch: 'main', credentialsId: '67b67088-d171-42d3-b4bf-b3a18f5eac79', url: 'https://github.com/Arun2602/vpc.git'
 	                    sh 'terraform init'
-	                    sh 'terraform apply -auto-approve'
 			    sh 'terraform destroy -auto-approve'
                 }
             }
