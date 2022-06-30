@@ -20,7 +20,7 @@ provider "aws" {
 resource "aws_vpc" "my-vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {
-    Name = "Terraform-VPC"
+    Name = "DEMO-VPC"
   }
 }
 
@@ -32,7 +32,7 @@ resource "aws_subnet" "web-subnet-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Websubter-1a"
+    Name = "DemoSub-1a"
   }
 }
 
@@ -43,7 +43,7 @@ resource "aws_subnet" "web-subnet-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Websubter-2b"
+    Name = "DemoSub-1b"
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_subnet" "application-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Applicationsubter-1a"
+    Name = "DemoSub-2a"
   }
 }
 
@@ -66,7 +66,7 @@ resource "aws_subnet" "application-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Applicationsubter-2b"
+    Name = "DemoSub-2b"
   }
 }
 
@@ -77,7 +77,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.my-vpc.id
 
   tags = {
-    Name = "Terraform-IGW"
+    Name = "Demo-IGW"
   }
 }
 
@@ -92,7 +92,7 @@ resource "aws_route_table" "web-rt" {
   }
 
   tags = {
-    Name = "Webterraform-RT"
+    Name = "Demo-RT"
   }
 }
 
